@@ -1,0 +1,97 @@
+﻿@model IEnumerable<LeaveSystem.Models.Leave>
+@{
+    ViewBag.Title = "LeaveDetails";
+}
+
+<h2>LeaveDetails...</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.leaveId)
+        </th>
+        <th>
+
+            @Html.DisplayNameFor(model => model.empId)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.leaveFrom)
+        </th>
+
+
+
+        <th>
+            @Html.DisplayNameFor(model => model.leaveTo)
+        </th>
+
+
+
+        <th>
+            @Html.DisplayNameFor(model => model.leaveNdays)
+        </th>
+
+
+        <th>
+            @Html.DisplayNameFor(model => model.leaveType)
+        </th>
+
+
+        <th>
+            @Html.DisplayNameFor(model => model.lStatus)
+        </th>
+
+
+
+        <th>
+            @Html.DisplayNameFor(model => model.leaveReason)
+        </th>
+    </tr>
+
+
+
+    @foreach (var item in Model)
+    {
+        <tr>
+
+        <td>
+            @Html.DisplayFor(model => item.leaveId)
+        </td>
+
+    <td>
+        @Html.DisplayFor(model => item.empId)
+    </td>
+
+    <td>
+        @Html.DisplayFor(model => item.leaveFrom)
+    </td>
+
+    <td>
+        @Html.DisplayFor(model => item.leaveTo)
+    </td>
+
+    <td>
+        @Html.DisplayFor(model => item.leaveNdays)
+    </td>
+
+    <td>
+        @Html.DisplayFor(model => item.leaveType)
+    </td>
+    <td>
+        @Html.DisplayFor(model => item.lStatus)
+    </td>
+
+    <td>
+        @Html.DisplayFor(model => item.leaveReason)
+    </td>
+
+
+
+
+    </tr>
+   }
+
+</table>
+
+        <button type="button" class="btn btn-primary" onclick="location.href='@Url.Action("Index","Employee")'">Back To List</button>

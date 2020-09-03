@@ -1,0 +1,113 @@
+﻿
+@{
+    ViewBag.Title = "Testimonials";
+}
+
+<h2>Testimonials...</h2>
+
+<hr />
+<div class="row">
+    <div class="col-md-3 text-center">
+
+        <div class="profile">
+
+            <blockquote>
+                <i class="fa fa-quote-left"></i> Displayed consistent overall improvement and growth
+                has an innate ability to think of various types of methods of improvement
+                Accomplished amazing results by displaying marked improvement.
+                Can consistently plan on the go towards improvement <i class="fa fa-quote-right"></i>
+            </blockquote>
+            -By Antonio Banderas
+
+        </div>
+
+    </div>
+
+
+    <div class="col-md-3 text-center">
+
+        <div class="profile">
+
+            <blockquote>
+                <i class="fa fa-quote-left"></i> Builds strong rapport with clients as he/she interacts with
+                a pleasant and  friendly tone over this application.
+                Consistently drives effective customer experience strategies
+                is empathetic towards customer issues.
+                Yet helpful in dealing with customer concerns <i class="fa fa-quote-right"></i>
+            </blockquote>
+            -By Jennifer Aniston
+
+        </div>
+
+    </div>
+
+
+    <div class="col-md-3 text-center">
+
+        <div class="profile">
+
+            <blockquote>
+                <i class="fa fa-quote-left"></i> Ability to think out of the box in the most challenging situations
+                Ability to think of alternatives such as which produced brilliant results
+                Constantly strives to experiment to drive results
+                Has initiated and executed creative ideas such as
+                Looks out for new  ideas <i class="fa fa-quote-right"></i>
+            </blockquote>
+            -By Nicole Kidman
+
+        </div>
+
+    </div>
+
+    <div class="col-md-3 text-center">
+
+        <div class="profile">
+
+            <blockquote>
+                <i class="fa fa-quote-left"></i> Consistently provides support to the team
+                Promotes one on one communication with the team members.
+                Provides the team with the required resources to achieve results
+                Provides support to the team during times of organizational transitioning
+                <i class="fa fa-quote-right"></i>
+            </blockquote>
+            -By Mark Wahlberg
+
+        </div>
+
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col-md-3 text-center">
+        <blockquote>
+            <i class="fa fa-quote-left"></i>
+            <p id="demo"></p>
+            <i class="fa fa-quote-right"></i>
+        </blockquote>
+    </div>
+
+</div>
+
+<h4>Feedback:</h4>
+<br>
+<textarea id="myTextarea" autofocus rows="6" cols="40">
+</textarea>
+
+
+<button type="button" class="alert-warning" onclick="myFunction()">Add Comment</button>
+
+<p id="demo"></p>
+
+<script>
+    function myFunction() {
+        var x = document.getElementById("myTextarea").value;
+        document.getElementById("demo").innerHTML = x;
+
+    }
+</script>
+
+<div>
+    <button type="button" class="btn btn-primary" onclick="location.href='@Url.Action("Contact","Home")'">Proceed to Contact Page</button>
+
+</div>

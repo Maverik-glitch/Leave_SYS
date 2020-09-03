@@ -1,0 +1,97 @@
+﻿@model IEnumerable<LeaveSystem.Models.Employee>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+
+
+<h2>WELCOME TO DASHBOARD...</h2>
+<hr />
+
+<p>
+    <button type="button" class="btn btn-success" onclick="location.href='@Url.Action("Create","Employee")'">ADD New Employee</button>
+</p>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.empId)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.mgrId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fullName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.deptName)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.mailId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.contactNo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.availLeaves)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.doj)
+        </th>
+
+        <th>
+            Operations To be Performed
+        </th>
+        <th>
+            Apply For Leave
+        </th>
+    </tr>
+
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@Html.DisplayFor(model => item.empId)</td>
+            <td>@Html.DisplayFor(model => item.mgrId)</td>
+            <td> @Html.DisplayFor(model => item.fullName)</td>
+            <td> @Html.DisplayFor(model => item.deptName)</td>
+            <td> @Html.DisplayFor(model => item.mailId)</td>
+            <td> @Html.DisplayFor(model => item.contactNo)</td>
+            <td> @Html.DisplayFor(model => item.availLeaves)</td>
+            <td> @Html.DisplayFor(model => item.doj)</td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.empId })
+                @Html.ActionLink("Details", "Details", new { id = item.empId })
+                @Html.ActionLink("Delete", "Delete", new { id = item.empId })
+
+
+            </td>
+
+            <td><button type="button" class="btn btn-success" onclick="location.href='@Url.Action("Apply","Leave")'">Apply Leave</button></td>
+
+
+
+
+
+
+
+        </tr>
+
+    }
+
+
+
+
+
+
+
+</table>
+
+<div>
+    <button type="button" class="btn btn-primary" onclick="location.href='@Url.Action("Testimonials","Home")'">Proceed to Testimonial Page</button>
+
+</div>
